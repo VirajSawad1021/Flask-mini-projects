@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pomodoro Timer{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pomodoro Timer</h1>
+        </header>
+        {% block content %}{% endblock %}
+        <footer>
+            <p>&copy; 2025 Pomodoro Tracker</p>
+        </footer>
+    </div>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
