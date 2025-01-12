@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Spending Trends</h2>
+<p>Here is a visualization of your expenses by category:</p>
+<div class="text-center">
+    {% if chart_image %}
+        <img src="data:image/png;base64,{{ chart_image }}" alt="Expense Report" class="img-fluid">
+    {% else %}
+        <p>No chart available. Please add some expenses to see the report.</p>
+    {% endif %}
+</div>
+{% endblock %}

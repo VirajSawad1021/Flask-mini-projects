@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="expenses-container">
+    <h2>Your Expenses</h2>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for expense in expenses %}
+                <tr>
+                    <td>{{ expense.name }}</td>
+                    <td>{{ expense.category }}</td>
+                    <td>${{ expense.amount }}</td>
+                    <td>{{ expense.date }}</td>
+                </tr>
+ {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
