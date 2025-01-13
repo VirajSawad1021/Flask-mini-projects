@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your-secret-key-here'  # Change this to a secure secret key
+app.config['SECRET_KEY'] = 'your-secret-key-here'  
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pomodoro.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
